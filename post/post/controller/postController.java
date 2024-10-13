@@ -20,7 +20,7 @@ public class postController {
     public ResponseEntity<Post> savePost(@RequestBody
     Post post){
        Post newPost= postService.savePost(post);
-        return new ResponseEntity<>(newPost , HttpStatus.CREATED);
+        return new ResponseEntity<>(newPost , HttpStatus.OK);
 
     }
     @GetMapping("/{postId}")
